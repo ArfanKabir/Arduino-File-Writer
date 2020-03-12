@@ -3,8 +3,8 @@ import serial
 from datetime import datetime
 import matplotlib.pyplot as plt
 def graphData():
-    arduinoFile = open("C:\\Python36-32\\arduinoData.txt", "r"); #Opens the code that the arduino data was written into
-    timeFile = open("C:\\Python36-32\\timeData.txt","r");#Opens the code that the time data was written into
+    arduinoFile = open("arduinoData.txt", "r"); #Opens the code that the arduino data was written into
+    timeFile = open("Python36-32\\timeData.txt","r");#Opens the code that the time data was written into
     timeArray=[];#Time Data will be read into here
     arduinoArray = [];#Arduino Data will be read into here
     timeArray.append(0);#The index starts at 0
