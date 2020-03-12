@@ -4,7 +4,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 def graphData():
     arduinoFile = open("arduinoData.txt", "r"); #Opens the code that the arduino data was written into
-    timeFile = open("Python36-32\\timeData.txt","r");#Opens the code that the time data was written into
+    timeFile = open("timeData.txt","r");#Opens the code that the time data was written into
     timeArray=[];#Time Data will be read into here
     arduinoArray = [];#Arduino Data will be read into here
     timeArray.append(0);#The index starts at 0
@@ -31,9 +31,9 @@ def graphData():
     plt.show();
 
 ser = serial.Serial('COM8', baudrate = 9600);#Opens up the arduino so that it can be used by the game
-arduinoFile = open("C:\\Python36-32\\arduinoData.txt", "w");
+arduinoFile = open("arduinoData.txt", "w");
 #Creates a file that the data writes into
-timeFile = open("C:\\Python36-32\\timeData.txt","w");
+timeFile = open("timeData.txt","w");
 try:
     while 1:
         arduinoData=ser.readline().decode('ascii');#While the loop runs, the data is going to be read into this variable
